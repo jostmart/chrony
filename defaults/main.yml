@@ -1,0 +1,9 @@
+---
+# defaults file for cygate_chrony
+
+ntp_timezone: Europe/Stockholm
+ntp_servers:
+  - gbg1.ntp.se
+  - gbg2.ntp.se
+  - sth1.ntp.se
+  - sth2.ntp.se

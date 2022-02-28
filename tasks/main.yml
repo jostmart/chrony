@@ -1,0 +1,17 @@
+---
+# tasks file for cygate_chrony
+
+- name: make sure chronyd is installed
+  yum:
+    name: chrony
+    state: latest
+
+- name: deploy chrony.conf template
+  template:
+    src: chrony.conf.j2
+    dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  notify: Restart chronyd

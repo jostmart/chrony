@@ -1,0 +1,7 @@
+---
+# handlers file for cygate_chrony
+
+- name: Restart chronyd
+  service:
+    name: chronyd
+    state: restarted
